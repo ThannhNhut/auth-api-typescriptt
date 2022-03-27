@@ -1,0 +1,49 @@
+POST http://localhost:5000/api/v1/users
+Content-Type: application/json
+
+{
+    "name": "nhut",
+    "email": "gaconght001@gmail.com",
+    "password": "@Bietdoi113",
+    "passwordConfirmation": "@Bietdoi113"
+}
+###
+POST http://localhost:5000/api/v1/sessions
+Content-Type: application/json
+
+{
+    "email": "gaconght001@gmail.com",
+    "password": "@Bietdoi1131"
+}
+###
+
+POST http://localhost:5000/api/v1/sessions/refresh
+Content-Type: application/json
+x-refresh: eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzZXNzaW9uIjoiNjIzZjY5ZTMzMGViOWRjMmFjZmZhZGI4IiwiaWF0IjoxNjQ4MzIzMDQzLCJleHAiOjE2Nzk4ODA2NDN9.O4kMGCQcyDetDXY04zaciCxq6SH7gZ2LDeBRv1rjyNu1le_3BpEWgnv3hThPQNdmQIIw8KXqOKCyeV2SC61b_QJHH3soUZ6RX6PBwzGzDheVR26T8VO0tCR2t-yyp0BnKoJ3m4pqVXnG1njfv_Qoqdq2zCAGelhvH2OKlmsqtjg
+###
+
+GET http://localhost:5000/api/users/me
+Content-Type: application/json
+Authorization: eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjNmNjllMDMwZWI5ZGMyYWNmZmFkYjUiLCJlbWFpbCI6ImdhY29uZ2h0MDAxQGdtYWlsLmNvbSIsIm5hbWUiOiJuaHV0IiwiY3JlYXRlZEF0IjoxNjQ4MzIzMDQwODU5LCJ1cGRhdGVkQXQiOjE2NDgzMjM1MzE3OTUsImlhdCI6MTY0ODM1NzE0OCwiZXhwIjoxNjQ4MzU4MDQ4fQ.BmHajLJCwxwqx576_ldfjUUsgpjo0xE947y1j0kTnLG8Hgrj0pYKCpWQB0OBQRUWaoV4cV1AZIJftHbjwkq3Hj4XYMuJeiKI0I-2KzU8jG8E9cbxcpYC7AmUP_pQ6ACeX1H1ynP_ittA4cf526M9fkABehVn5B4et2eHKIfYgC4
+###
+
+POST http://localhost:5000/api/users/verify/623f69e030eb9dc2acffadb5/Wp8wtxS5vM7oG4I5LWGZN
+Content-Type: application/json
+x-refresh: eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjNmNjllMDMwZWI5ZGMyYWNmZmFkYjUiLCJlbWFpbCI6ImdhY29uZ2h0MDAxQGdtYWlsLmNvbSIsIm5hbWUiOiJuaHV0IiwiY3JlYXRlZEF0IjoxNjQ4MzIzMDQwODU5LCJ1cGRhdGVkQXQiOjE2NDgzMjMwNDA4NTksImlhdCI6MTY0ODMyMzA0MywiZXhwIjoxNjQ4MzIzOTQzfQ.XxB1On-qM4M5XYCVlgDY3ZESc5UuM5YntnIs5HpzhVM2GOfvHhIg4Hmx5iSk0xRvUq-VWhl4pYS8NyUBHfNBMnnp-ByfGb_qmqS6aIEAi6YD7x5Onvgs-B4mKR2HKk1TcIneuVSCOLkZvUMn-fa70D4x0HYft_4hloCt78Thg6E
+###
+
+POST http://localhost:5000/api/users/forgotpassword
+Content-Type: application/json
+
+{
+    "email": "gaconght001@gmail.com"
+}
+###
+POST http://localhost:5000/api/users/resetpassword/623f69e030eb9dc2acffadb5/LnWtU3ZvbFYJQhjpfO_1E
+Content-Type: application/json
+
+{
+    "password": "@Bietdoi1131",
+    "passwordConfirmation": "@Bietdoi1131"
+}
+###
